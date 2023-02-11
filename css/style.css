@@ -36,6 +36,7 @@ h2 {
   object-fit: contain;
 }
 .popup-image-active {
+  transition: 300ms;
   display: block;
 }
 .popup-image img {

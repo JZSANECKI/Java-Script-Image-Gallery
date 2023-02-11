@@ -35,9 +35,11 @@ const clickEventGallery = (e) => {
   const img = document.querySelector('img');
   // img.setAttribute('src',`${galvar}`)
   const bgattr = e.target.getAttribute('style');
+  if (bgattr !== null){
   let newurl = bgattr.slice(22, -2);
   console.log(newurl);
   img.setAttribute('src', newurl);
-  gal.forEach((galvar) => removeEventListener('click', clickEventGallery));
+  }
+//   gal.forEach((galvar) => removeEventListener('click', clickEventGallery));
 };
 gal.forEach((galvar) => addEventListener('click', clickEventGallery));
