@@ -17,7 +17,4 @@ const gal = document.querySelectorAll('.gal')
 console.log(gal)
 
 
-// const bump = () =>{
 
-// }
-// gal.forEach(gal => addEventListener('mouseover', bump))
