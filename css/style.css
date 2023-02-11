@@ -1,6 +1,5 @@
 * {
   background-color: rgb(255, 255, 255);
-
 }
 h1,
 h2 {
@@ -13,51 +12,45 @@ h2 {
   transition: 900ms;
   border-style: solid;
   border-color: white;
-  
 }
-.test2:hover{
+.test2:hover {
   opacity: 0.5;
   transition: 500ms;
-  
-
 }
 .light {
   opacity: 0.7;
 }
-.link{
+.link {
   height: 100%;
   width: 100%;
   opacity: 0;
 }
-.popup-image{
-display: none;
-width: 100vw;
-height: 100vh;
-backdrop-filter: blur(10px);
-left: 0;
-top: 0;
-background-color: rgba(0,0,0,0.7);
-object-fit:contain;
-
+.popup-image {
+  display: none;
+  width: 100vw;
+  height: 100vh;
+  backdrop-filter: blur(10px);
+  left: 0;
+  top: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  object-fit: contain;
 }
-.popup-image-active{
-display: block;
+.popup-image-active {
+  display: block;
 }
-.popup-image img{
+.popup-image img {
   position: absolute;
   border: 1rem solid;
-  border-color:white;
-max-width: 90%;
-max-height: 90%;
-left: 50%;
-top: 50%;
-transform: translate(-50%,-50%);
-
-
-} 
-.x{
+  border-color: white;
+  max-width: 90%;
+  max-height: 90%;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+.x {
   position: absolute;
-right: 25px;
+  right: 25px;
   top: 10px;
   z-index: 100;
 }
