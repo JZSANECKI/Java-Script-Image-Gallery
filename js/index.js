@@ -21,25 +21,26 @@ function makeImg(x) {
   document.querySelectorAll('div');
   div.classList.add('col-md-3', 'col-sm-4', 'test2', 'gal');
   div.setAttribute('style', `background-image: url(${x});`);
-  // div.innerHTML=` <a href="${x}"><div class="link"></div></a>`
+
 }
 pictures.forEach((picture) => makeImg(picture));
 
 const gal = document.querySelectorAll('.gal');
 const pop = document.querySelector('.popup-image');
 
-// console.log(gal)
+
 
 const clickEventGallery = (e) => {
-  pop.classList.add('popup-image-active');
+  pop.classList.toggle('popup-image-active');
   const img = document.querySelector('img');
-  // img.setAttribute('src',`${galvar}`)
+
   const bgattr = e.target.getAttribute('style');
   if (bgattr !== null){
   let newurl = bgattr.slice(22, -2);
-  console.log(newurl);
   img.setAttribute('src', newurl);
-  }
-//   gal.forEach((galvar) => removeEventListener('click', clickEventGallery));
+}
+
 };
+
 gal.forEach((galvar) => addEventListener('click', clickEventGallery));
+
