@@ -29,3 +29,35 @@ h2 {
   width: 100%;
   opacity: 0;
 }
+.popup-image{
+display: none;
+width: 100vw;
+height: 100vh;
+backdrop-filter: blur(10px);
+left: 0;
+top: 0;
+background-color: rgba(0,0,0,0.7);
+object-fit:contain;
+
+}
+.popup-image-active{
+display: block;
+}
+.popup-image img{
+  position: absolute;
+  border: 1rem solid;
+  border-color:white;
+max-width: 90%;
+max-height: 90%;
+left: 50%;
+top: 50%;
+transform: translate(-50%,-50%);
+
+
+} 
+.x{
+  position: absolute;
+right: 25px;
+  top: 10px;
+  z-index: 100;
+}
