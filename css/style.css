@@ -24,3 +24,7 @@ h2 {
 .light {
   opacity: 0.7;
 }
+.link{
+  height: 100%;
+  width: 100%;
+}

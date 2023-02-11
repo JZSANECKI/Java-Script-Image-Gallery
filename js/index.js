@@ -8,17 +8,16 @@ function makeImg(x){
     row.appendChild(div)
     document.querySelectorAll('div')
     div.classList.add('col-md-3','col-sm-4','test2','gal')
-    div.setAttribute('style',`background-image: url(${x});`)
-    
-    
+    div.setAttribute('style',`background-image: url(${x});`)  
+    div.innerHTML=` <a href="${x}"><div class="link"></div></a>`
 };
 pictures.forEach(picture => makeImg(picture))
 
 const gal = document.querySelectorAll('.gal')
-const bump = () =>{
-// gal.classList.add('light')  
-// console.log('dddddd')
-}
-gal.forEach(gal => addEventListener('mouseover', bump))
+console.log(gal)
 
 
+// const bump = () =>{
+
+// }
+// gal.forEach(gal => addEventListener('mouseover', bump))
