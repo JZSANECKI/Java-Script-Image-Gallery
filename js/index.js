@@ -15,7 +15,7 @@ const pictures = [
 
 const row = document.querySelector('#gallery');
 
-function makeImg(x) {
+const makeImg = (x) => {
   div = document.createElement('div');
   row.appendChild(div);
   document.querySelectorAll('div');
@@ -27,8 +27,6 @@ pictures.forEach((picture) => makeImg(picture));
 
 const gal = document.querySelectorAll('.gal');
 const pop = document.querySelector('.popup-image');
-
-
 
 const clickEventGallery = (e) => {
   pop.classList.toggle('popup-image-active');
