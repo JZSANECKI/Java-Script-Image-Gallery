@@ -30,6 +30,7 @@ h2 {
 }
 .popup-image {
   display: none;
+
   width: 100vw;
   height: 100vh;
   backdrop-filter: blur(10px);
@@ -41,6 +42,7 @@ h2 {
 .popup-image-active {
   transition: 300ms;
   display: block;
+
 }
 .popup-image img {
   box-shadow: 10px 10px 50px rgb(97, 97, 97);
