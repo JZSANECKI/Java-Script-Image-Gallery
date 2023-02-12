@@ -16,8 +16,9 @@ h2 {
 }
 .test2:hover {
   opacity: 0.5;
-  transition: 500ms;
   box-shadow: inset 0px 0px 50px 4px rgb(87, 87, 87);
+
+  transition: 500ms;
 }
 .light {
   opacity: 0.7;
