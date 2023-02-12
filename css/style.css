@@ -32,7 +32,7 @@ h2 {
   backdrop-filter: blur(10px);
   left: 0;
   top: 0;
-  background-color: rgba(0, 0, 0, 0.7);
+  background-color: rgba(255, 255, 255, 0.7);
   object-fit: contain;
 }
 .popup-image-active {
@@ -40,6 +40,7 @@ h2 {
   display: block;
 }
 .popup-image img {
+  box-shadow: 10px 10px 50px rgb(97, 97, 97);
   position: absolute;
   border: 1rem solid;
   border-color: white;
