@@ -1,4 +1,6 @@
 # Java-Script-Image-Gallery
+Live demo here https://jzsanecki.github.io/Java-Script-Image-Gallery/
+
 <h2>#1 Preview:</h2>
 <h3> Grid:</h3>
 
