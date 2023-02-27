@@ -23,6 +23,6 @@ Simply add a path to your images in the correct order.
 
 ![image](https://user-images.githubusercontent.com/115653252/221582673-1b13ba73-21f5-4eaf-8c0a-b12fd5cb10e6.png)
 
-
+All images will be croped to square on grid view
 
 
