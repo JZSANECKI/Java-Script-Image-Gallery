@@ -15,9 +15,10 @@ const pictures = [
 ];
 const nextBtn=document.querySelector('.next-icon');
 const prevBtn=document.querySelector('.prev-icon');
-
-
+const closeBtn=document.querySelector('.close-icon');
 const row = document.querySelector('#gallery');
+
+
 
 const makeImg = (x) => {
   div = document.createElement('div');
@@ -33,8 +34,10 @@ const gal = document.querySelectorAll('.gal');
 const pop = document.querySelector('.popup-image');
 
 const clickEventGallery = (e) => {
+  gal.forEach((galvar) => removeEventListener('click', clickEventGallery));
+  console.log(pop.classList);
   pop.classList.add('popup-image-active');
-  const img = document.querySelector('img');
+  pop.classList.remove('popup-image-inactive');  const img = document.querySelector('img');
 
   let bgattr = e.target.getAttribute('style');
   if (bgattr !== null){
@@ -42,43 +45,56 @@ const clickEventGallery = (e) => {
   img.setAttribute('src', newurl);
 
 
+  
+  
+  // nawigacja
   let currentTarget = e.target;
-  // let prevBg = e.target.previousSibling;
+  
+  nextBtnFn =() => {
+    let checkNext = currentTarget.nextSibling
 
 
-  nextBtnFn =(x) => {
+
+    if(checkNext == null){
+      return
+      }
     currentTarget=currentTarget.nextSibling
-bgattrAlt = currentTarget.getAttribute('style');
-let nextUrl = bgattrAlt.slice(22, -2);
-img.setAttribute('src', nextUrl);
-
-if(currentTarget == null){
-  console.log("ups...")
-
-}
+    bgattrAlt = currentTarget.getAttribute('style');
+    let nextUrl = bgattrAlt.slice(22, -2);
+    img.setAttribute('src', nextUrl);
 
 
-  }
-  prevBtnFn =(x) => {
-currentTarget=currentTarget.previousSibling
-bgattrAlt = currentTarget.getAttribute('style');
-let prevUrl = bgattrAlt.slice(22, -2);
-img.setAttribute('src', prevUrl);
+    }
 
-if(currentTarget == null){
-  console.log("ups...")
+  prevBtnFn =() => {
+    let checkPrev = currentTarget.previousSibling
+    if(checkPrev == null){
+      return
+      }
+    currentTarget=currentTarget.previousSibling
+    bgattrAlt = currentTarget.getAttribute('style');
+    let prevUrl = bgattrAlt.slice(22, -2);
+    img.setAttribute('src', prevUrl);
 
-}
+    }
 
-
-  }
 
   nextBtn.addEventListener("click", nextBtnFn)
   prevBtn.addEventListener("click", prevBtnFn)
+  
+  // koniec nawigacji
+
 }
 
+closeBtnFn = () =>{
+
+  location.reload()
+}
+closeBtn.addEventListener("click", closeBtnFn)
 
 };
 
 gal.forEach((galvar) => addEventListener('click', clickEventGallery));
+
+
 
