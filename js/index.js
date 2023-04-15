@@ -14,7 +14,8 @@ const pictures = [
   'https://picsum.photos/800/600?random=1','https://picsum.photos/800/600?random=2','https://picsum.photos/800/600?random=3','https://picsum.photos/800/600?random=4','https://picsum.photos/1600/1800?random=5','https://picsum.photos/800/600?random=6'
 ];
 const nextBtn=document.querySelector('.next-icon');
-console.log(nextBtn)
+const prevBtn=document.querySelector('.prev-icon');
+
 
 const row = document.querySelector('#gallery');
 
@@ -41,21 +42,39 @@ const clickEventGallery = (e) => {
   img.setAttribute('src', newurl);
 
 
-  let nextBg = e.target.nextSibling;
- console.log(nextBg)
+  let currentTarget = e.target;
+  // let prevBg = e.target.previousSibling;
+
+
   nextBtnFn =(x) => {
-bgattrAlt = nextBg.getAttribute('style');
+    currentTarget=currentTarget.nextSibling
+bgattrAlt = currentTarget.getAttribute('style');
 let nextUrl = bgattrAlt.slice(22, -2);
 img.setAttribute('src', nextUrl);
-nextBg=nextBg.nextSibling
-if(nextBg == null){
+
+if(currentTarget == null){
   console.log("ups...")
 
 }
 
-console.log(nextBg);
+
   }
+  prevBtnFn =(x) => {
+currentTarget=currentTarget.previousSibling
+bgattrAlt = currentTarget.getAttribute('style');
+let prevUrl = bgattrAlt.slice(22, -2);
+img.setAttribute('src', prevUrl);
+
+if(currentTarget == null){
+  console.log("ups...")
+
+}
+
+
+  }
+
   nextBtn.addEventListener("click", nextBtnFn)
+  prevBtn.addEventListener("click", prevBtnFn)
 }
 
 
