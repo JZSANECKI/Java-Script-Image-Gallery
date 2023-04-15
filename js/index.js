@@ -13,6 +13,8 @@ const pictures = [
   'https://images.unsplash.com/photo-1675155132562-9edd55028f3b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=928&q=80',
   'https://picsum.photos/800/600?random=1','https://picsum.photos/800/600?random=2','https://picsum.photos/800/600?random=3','https://picsum.photos/800/600?random=4','https://picsum.photos/1600/1800?random=5','https://picsum.photos/800/600?random=6'
 ];
+const nextBtn=document.querySelector('.next-icon');
+console.log(nextBtn)
 
 const row = document.querySelector('#gallery');
 
@@ -30,14 +32,32 @@ const gal = document.querySelectorAll('.gal');
 const pop = document.querySelector('.popup-image');
 
 const clickEventGallery = (e) => {
-  pop.classList.toggle('popup-image-active');
+  pop.classList.add('popup-image-active');
   const img = document.querySelector('img');
 
-  const bgattr = e.target.getAttribute('style');
+  let bgattr = e.target.getAttribute('style');
   if (bgattr !== null){
   let newurl = bgattr.slice(22, -2);
   img.setAttribute('src', newurl);
+
+
+  let nextBg = e.target.nextSibling;
+ console.log(nextBg)
+  nextBtnFn =(x) => {
+bgattrAlt = nextBg.getAttribute('style');
+let nextUrl = bgattrAlt.slice(22, -2);
+img.setAttribute('src', nextUrl);
+nextBg=nextBg.nextSibling
+if(nextBg == null){
+  console.log("ups...")
+
 }
+
+console.log(nextBg);
+  }
+  nextBtn.addEventListener("click", nextBtnFn)
+}
+
 
 };
 
