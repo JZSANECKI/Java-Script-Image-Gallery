@@ -5,7 +5,7 @@ h1,
 h2 {
   font-family: Lato;
 }
-.test2 {
+.gallery {
   aspect-ratio: 1;
   /* border-radius: 7px; */
   background-size: cover;
@@ -14,9 +14,9 @@ h2 {
   border-style: solid;
   border-color: white;
 }
-.test2:hover {
+.gallery:hover {
   opacity: 0.5;
-  box-shadow: inset 0px 0px 50px 4px rgb(87, 87, 87);
+  /* box-shadow: inset 0px 0px 50px 4px rgb(87, 87, 87); */
 
   transition: 500ms;
 }
@@ -61,31 +61,48 @@ h2 {
   top: 50%;
   transform: translate(-50%, -50%);
 }
-.x {
-  position: absolute;
-  right: 25px;
-  top: 10px;
-  z-index: 100;
-}
+
 .next-icon, .prev-icon,.close-icon{
   width:50px;
   height:50px;
-  background: red;
+
   border-radius: 50%;
   position: absolute;
+  background-size:30%;
+background-repeat: no-repeat;
+background-position: center;
+opacity: 0.5;
+transition: opacity 300ms;
+}
+.next-icon:hover, .prev-icon:hover,.close-icon:hover {
+opacity:1;
+transition: opacity 300ms;
 }
 .next-icon{
   top:50%;
   transform: translateY(-50%);
 right: 40px;
+background-image: url(../img/icons/next.svg);
+
 }
 .prev-icon{
   top:50%;
   transform: translateY(-50%);
 left: 25px; 
+background-image: url(../img/icons/prev.svg);
 }
 .close-icon{
-  bottom:25px;
-left:50%;
-transform: translateX(-50%);
+  bottom:1px;
+  left:50%;
+  transform: translateX(-50%);
+  background-image: url(../img/icons/close.svg);
+}
+.next-icon img{
+scale:2;
+}
+
+@media (max-width:576px){
+  .gallery:hover{
+    opacity:1;
+  }
 }
