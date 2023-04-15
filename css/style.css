@@ -7,7 +7,7 @@ h2 {
 }
 .gallery {
   aspect-ratio: 1;
-  /* border-radius: 7px; */
+
   background-size: cover;
   background-position: center;
   transition: 1500ms;
@@ -16,7 +16,6 @@ h2 {
 }
 .gallery:hover {
   opacity: 0.5;
-  /* box-shadow: inset 0px 0px 50px 4px rgb(87, 87, 87); */
 
   transition: 500ms;
 }
