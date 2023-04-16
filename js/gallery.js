@@ -21,11 +21,6 @@ const row = document.querySelector('#gallery');
 
 
 const makeImg = (x) => {
-  let classCheck = e.target.classList
-  console.log(classCheck)
-
-  let classCheckVar = classCheck.contains("gal")
- if(classCheckVar!=true){return}
   div = document.createElement('div');
   row.appendChild(div);
   document.querySelectorAll('div');
@@ -42,8 +37,7 @@ const clickEventGallery = (e) => {
   gal.forEach((galvar) => removeEventListener('click', clickEventGallery));
   console.log(pop.classList);
   pop.classList.add('popup-image-active');
-
-  const img = document.querySelector('img');
+  pop.classList.remove('popup-image-inactive');  const img = document.querySelector('img');
 
   let bgattr = e.target.getAttribute('style');
   if (bgattr !== null){
@@ -93,8 +87,8 @@ const clickEventGallery = (e) => {
 }
 
 closeBtnFn = () =>{
-  pop.classList.remove('popup-image-active');
-  // location.reload()
+
+  location.reload()
 }
 closeBtn.addEventListener("click", closeBtnFn)
 
